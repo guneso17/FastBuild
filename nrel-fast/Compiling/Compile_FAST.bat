@@ -20,7 +20,7 @@ REM    properties, and copy the target (without cmd.exe and/or its switches) her
 rem IF "%INTEL_SHARED%"=="" CALL "C:\Program Files\Intel\Compiler\Fortran\10.1.024\IA32\Bin\IFORTVARS.bat"
 rem CALL "C:\Program Files (x86)\Intel\ComposerXE-2011\bin\ipsxe-comp-vars.bat" ia32 vs2008
 
-CALL "C:\Program Files (x86)\Intel\Composer XE 2011 SP1\bin\ipsxe-comp-vars.bat" ia32 vs2010
+CALL "C:\Program Files (x86)\Intel\oneAPI\setvars.bat" intel64 vs2019
 
 
 
@@ -28,7 +28,7 @@ REM ----------------------------------------------------------------------------
 REM -------------------- LOCAL VARIABLES ---------------------------------------
 REM ----------------------------------------------------------------------------
 
-SET ROOT_NAME=FAST_iwin32
+SET ROOT_NAME=FAST_x64
 
 SET COMPOPTS=/threads  /O2 /inline:speed /traceback /Qzero /Qsave /real_size:32 /assume:byterecl
 rem SET LINKOPTS=/link /stack:64000000
@@ -53,10 +53,10 @@ rem SET AeroDyn_Loc=C:\Users\bjonkman\Data\DesignCodes\AeroDyn\Source
 rem SET Wind_Loc=C:\Users\bjonkman\Data\DesignCodes\AeroDyn\Source\InflowWind\Source
 rem SET FAST_Loc=C:\Users\bjonkman\Data\DesignCodes\FAST\Source
 
-SET NWTC_Lib_Loc=C:\Users\bjonkman\Documents\DATA\DesignCodes\miscellaneous\nwtc_subs\SVNdirectory\trunk\source
-SET AeroDyn_Loc=C:\Users\bjonkman\Documents\DATA\DesignCodes\simulators\AeroDyn\SVNdirectory\trunk\Source
-SET Wind_Loc=C:\Users\bjonkman\Documents\DATA\DesignCodes\simulators\InflowWind\SVNdirectory\trunk\Source
-SET FAST_Loc=C:\Users\bjonkman\Documents\DATA\DesignCodes\simulators\FAST\SVNdirectory\trunk\Source
+SET NWTC_Lib_Loc="C:\Users\ITU\Desktop\Onur\fastbuild-master\externals\nrel-nwtc\source"
+SET AeroDyn_Loc="C:\Users\ITU\Desktop\Onur\fastbuild-master\externals\nrel-aerodyn\Source"
+SET Wind_Loc="C:\Users\ITU\Desktop\Onur\fastbuild-master\externals\nrel-inflowwind\Source"
+SET FAST_Loc="C:\Users\ITU\Desktop\Onur\fastbuild-master\externals\nrel-fast\Source"
 
 
 REM ----------------------------------------------------------------------------
@@ -170,3 +170,5 @@ SET FAST_Loc=
 
 SET COMPOPTS=
 SET LINKOPTS=
+
+pause
